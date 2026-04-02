@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>済生会小樽PGEPOC2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --bg-card: #ffffff;
+      --accent: #3b6fd8;
+      --accent-soft: #e3edff;
+      --accent-strong: #244a96;
+      --text-main: #1f2933;
+      --text-sub: #6b7280;
+      --border-soft: #dde3f0;
+      --pill-p: #f97373;
+      --pill-g: #fbbf24;
+      --pill-e: #34d399;
+      --pill-p2: #60a5fa;
+      --pill-o: #a855f7;
+      --pill-c: #f97316;
+      --pill-2: #10b981;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --shadow-soft: 0 14px 30px rgba(15, 23, 42, 0.08);
+      --shadow-subtle: 0 6px 16px rgba(15, 23, 42, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      line-height: 1.7;
+      background: radial-gradient(circle at top left, #e0ebff 0, #f5f7fb 40%, #f5f7fb 100%);
+      color: var(--text-main);
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 1.4rem 1.2rem 0.8rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .badge-epoc {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 0.75rem;
+      color: var(--accent-strong);
+      backdrop-filter: blur(10px);
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    h1 {
+      margin: 0.7rem 0 0.3rem;
+      font-size: clamp(1.5rem, 4.8vw, 2.1rem);
+      letter-spacing: 0.03em;
+    }
+
+    .subtitle {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--text-sub);
+    }
+
+    .subtitle strong {
+      color: var(--accent-strong);
+      font-weight: 600;
+    }
+
+    main {
+      flex: 1;
+      padding: 0.4rem 1.2rem 1.8rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    /* ===== 1カラム用レイアウト ===== */
+    .layout-grid {
+      display: block;
+      margin-top: 1rem;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      padding: 1.1rem 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.6rem;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 600;
+      display: flex;
+      gap: 0.4rem;
+    }
+
+    .card-title span.key {
+      font-size: 0.85rem;
+      padding: 0.1rem 0.5rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-strong);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin: 0.4rem 0 0.6rem;
+    }
+
+    .pill {
+      padding: 0.18rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: #e5e7eb;
+    }
+
+    .axis-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.4rem 0 0;
+    }
+
+    .axis-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.6rem;
+      padding: 0.45rem;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(209, 213, 219, 0.8);
+      background: linear-gradient(135deg, #ffffff, #f9fafb);
+      margin-bottom: 0.4rem;
+    }
+
+    .axis-code {
+      font-weight: 700;
+      padding: 0.1rem 0.55rem;
+      border-radius: 999px;
+      background: #e5e7eb;
+    }
+
+    .axis-label-main {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .axis-label-sub {
+      font-size: 0.8rem;
+      color: var(--text-sub);
+    }
+
+    .sm-note {
+      font-size: 0.78rem;
+      color: var(--text-sub);
+      margin-top: 0.4rem;
+    }
+
+    footer {
+      padding: 0.8rem 1.2rem 1.2rem;
+      max-width: 960px;
+      margin: 0 auto;
+      font-size: 0.75rem;
+      color: var(--text-sub);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .footer-right {
+      text-align: right;
+    }
+
+    @media (max-width: 600px) {
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .footer-right {
+        text-align: left;
+      }
+    }
+    /* ===== pill 色指定（復活） ===== */
+.pill.p { background: rgba(248, 113, 113, 0.12); border-color: rgba(248, 113, 113, 0.6); }
+.pill.g { background: rgba(251, 191, 36, 0.12); border-color: rgba(251, 191, 36, 0.6); }
+.pill.e { background: rgba(52, 211, 153, 0.12); border-color: rgba(52, 211, 153, 0.6); }
+.pill.p2 { background: rgba(96, 165, 250, 0.12); border-color: rgba(96, 165, 250, 0.7); }
+.pill.o { background: rgba(168, 85, 247, 0.12); border-color: rgba(168, 85, 247, 0.7); }
+.pill.c { background: rgba(249, 115, 22, 0.12); border-color: rgba(249, 115, 22, 0.7); }
+.pill.two { background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.7); }
+
+/* ===== axis 色同期（復活） ===== */
+.axis-list li:nth-of-type(1) .axis-code,
+.axis-list li:nth-of-type(1) .axis-label-main {
+  color: var(--pill-p);
+  background: rgba(249, 115, 115, 0.12);
+}
+
+.axis-list li:nth-of-type(2) .axis-code,
+.axis-list li:nth-of-type(2) .axis-label-main {
+  color: var(--pill-g);
+  background: rgba(251, 191, 36, 0.12);
+}
+
+.axis-list li:nth-of-type(3) .axis-code,
+.axis-list li:nth-of-type(3) .axis-label-main {
+  color: var(--pill-e);
+  background: rgba(52, 211, 153, 0.12);
+}
+
+.axis-list li:nth-of-type(4) .axis-code,
+.axis-list li:nth-of-type(4) .axis-label-main {
+  color: var(--pill-p2);
+  background: rgba(96, 165, 250, 0.12);
+}
+
+.axis-list li:nth-of-type(5) .axis-code,
+.axis-list li:nth-of-type(5) .axis-label-main {
+  color: var(--pill-o);
+  background: rgba(168, 85, 247, 0.12);
+}
+
+.axis-list li:nth-of-type(6) .axis-code,
+.axis-list li:nth-of-type(6) .axis-label-main {
+  color: var(--pill-c);
+  background: rgba(249, 115, 22, 0.12);
+}
+.axis-list a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.axis-list a:hover {
+  background: rgba(59, 130, 246, 0.04);
+}
+.axis-item {
+  display: grid;
+}
+.axis-item:hover {
+  background: rgba(59, 130, 246, 0.04);
+}
+a.axis-item {
+  display: grid !important;
+}
+
+  </style>
+</head>
+
+<body>
+<div class="page">
+
+<header>
+<div class="badge-epoc">
+  <span class="badge-dot"></span>
+  <a href="https://epoc2.umin.ac.jp/epoc2.html" target="_blank" rel="noopener">
+    PG‑EPOC2（Post Graduate E‑Portfolio Clinical‑training 2）
+  </a>
+</div>
+
+
+  <h1>PGEPOC2：研修医の到達目標「6つの軸」＋1</h1>
+  <p class="subtitle">
+    <strong>精神的・身体的・社会的に成長し、医師としての実りを育む</strong><br>
+    済生会小樽病院初期臨床研修の到達目標
+  </p>
+</header>
+
+<main>
+  <div class="layout-grid">
+    <section class="card">
+
+        <div class="card-header">
+          <div class="card-title">
+            <span class="key">PGEPOC2</span>
+            <span>6つの軸と「にこにこ」</span>
+          </div>
+        </div>
+
+        <div class="pill-row">
+          <a href="Professionalism.html" class="pill p"><span class="code">P</span>：Professionalism</a>
+          <a href="Generalism.html" class="pill g"><span class="code">G</span>：Generalism</a>
+          <a href="Emergency.html" class="pill e"><span class="code">E</span>：Emergency</a>
+          <a href="Primary_care.html" class="pill p2"><span class="code">P</span>：Primary care</a>
+          <a href="Older_adults.html" class="pill o"><span class="code">O</span>：Older adults</a>
+          <a href="Communication.html" class="pill c"><span class="code">C</span>：Communication</a>
+          <a href="にこにこ.html" class="pill two"><span class="code">2</span>：にこにこ</a>
+        </div>
+<ul class="axis-list">
+
+  <li>
+    <a href="Professionalism.html" class="axis-item">
+      <div class="axis-code">P</div>
+      <div>
+        <div class="axis-label-main">Professionalism：医師としての姿勢・態度</div>
+        <div class="axis-label-sub">
+          <strong>責任・真摯・研鑽</strong>の3つを土台に、医師としての在り方を磨き続ける
+        </div>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <a href="Generalism.html" class="axis-item">
+      <div class="axis-code">G</div>
+      <div>
+        <div class="axis-label-main">Generalism：全人的診療</div>
+        <div class="axis-label-sub">疾患ではなく、<strong>人</strong>を扱う</div>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <a href="Emergency.html" class="axis-item">
+      <div class="axis-code">E</div>
+      <div>
+        <div class="axis-label-main">Emergency：初期対応</div>
+        <div class="axis-label-sub"><strong>命の危険</strong>を評価し、回避する</div>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <a href="Primary_care.html" class="axis-item">
+      <div class="axis-code">P</div>
+      <div>
+        <div class="axis-label-main">Primary care：common diseases</div>
+        <div class="axis-label-sub"><strong>専門性によらない</strong>疾患診療</div>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <a href="Older.html" class="axis-item">
+      <div class="axis-code">O</div>
+      <div>
+        <div class="axis-label-main">Older：高齢者医療</div>
+        <div class="axis-label-sub"><strong>生活を守り続ける</strong>ための医療</div>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <a href="Communication.html" class="axis-item">
+      <div class="axis-code">C</div>
+      <div>
+        <div class="axis-label-main">Communication：情報伝達</div>
+        <div class="axis-label-sub">
+          限られた時間を無駄にせず、<strong>必要な情報を適切に共有するスキル</strong>
+        </div>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <a href="にこにこ.html" class="axis-item two">
+      <div class="axis-code two">2</div>
+      <div>
+        <div class="axis-label-main two">にこにこ(#^^#)</div>
+        <div class="axis-label-sub two"><strong>笑顔</strong>で接する、<strong>笑顔</strong>でいられる、研修生活</div>
+      </div>
+    </a>
+  </li>
+
+</ul>
+
+
+        <p class="sm-note">
+          PGEPOCを埋めながら、PGEPOC2を習得していきましょう。         
+        </p>
+<hr class="section-divider">
+
+<section class="link-panel">
+  <h2 class="link-title">教育資料・リンク集</h2>
+  <ul class="link-list">
+    <li>
+      <a href="links.html">▶ 教育資料・リンク集</a>
+      <span class="link-note">研修医教育に関する資料・ツールを順次追加</span>
+    </li>
+  </ul>
+</section>
+
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div>
+    PG‑EPOC2 × 研修医ページ（試作版）
+  </div>
+  <div class="footer-right">
+    スマホ優先・シンプルカードレイアウト
+  </div>
+</footer>
+
+</div>
+</body>
+</html>
