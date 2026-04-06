@@ -2,131 +2,130 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Generalism｜PGEPOC2</title>
+  <title>Generalism｜resident-tools</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
       margin: 0;
-      padding: 1.2rem;
-      background: #f9fafb;
-      color: #111827;
+      padding: 0;
       line-height: 1.7;
+      background: #fafafa;
+      color: #222;
+    }
+
+    header {
+      background: #fbbf24;
+      color: #111;
+      padding: 1.2rem;
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: bold;
     }
 
     .container {
-      max-width: 720px;
+      max-width: 900px;
       margin: 0 auto;
-    }
-
-    h1 {
-      font-size: 1.4rem;
-      margin-bottom: 0.6rem;
-    }
-
-    .subtitle {
-      font-size: 0.9rem;
-      color: #6b7280;
-      margin-bottom: 1.2rem;
-    }
-
-    .content {
-      background: #ffffff;
-      border-radius: 0.75rem;
-      padding: 1rem;
-      border: 1px solid rgba(209, 213, 219, 0.8);
-      margin-bottom: 1.4rem;
+      padding: 1.4rem;
     }
 
     h2 {
-      font-size: 1.2rem;
-      margin-top: 1.6rem;
-      margin-bottom: 0.6rem;
-      color: var(--axis-color);
+      font-size: 1.3rem;
+      margin-top: 2rem;
+      border-left: 6px solid #fbbf24;
+      padding-left: 0.6rem;
+      font-weight: 600;
     }
 
     h3 {
-      font-size: 1.1rem;
-      margin-top: 1.2rem;
-      color: #92400e;
+      font-size: 1.2rem;
+      margin-top: 1.6rem;
+      color: #b45309;
     }
 
     ul {
       padding-left: 1.2rem;
-      margin-top: 0.4rem;
+      margin-top: 0.6rem;
     }
 
     li {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
     }
 
-    :root {
-      --pill-g: #fbbf24;
-      --axis-color: var(--pill-g);
+    .section-block {
+      background: #fff;
+      padding: 1.2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      margin-top: 1.4rem;
     }
 
-    h1 {
-      color: var(--axis-color);
-    }
-
-    .content {
-      border-left: 4px solid var(--axis-color);
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 0.85rem;
+      color: #777;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Generalism</h1>
-    <div class="subtitle">全人的診療：疾患ではなく、<strong>人</strong>を扱う</div>
 
-    <!-- Generalism の核 -->
-    <div class="content">
-      <p><strong>Generalism とは：</strong><br>
-      全身を系統的に評価し、疾患ではなく「人の状態」を扱う診断姿勢。</p>
-    </div>
+<header>Generalism｜resident-tools</header>
 
-    <!-- Generalism の構造 -->
-    <h2>診療ステップ</h2>
-    <div class="content">
+<div class="container">
+
+  <h2>Generalism とは</h2>
+  <div class="section-block">
+    <p>
+      全身を系統的に評価し、疾患ではなく「人の状態」を扱う診断姿勢。
+    </p>
+  </div>
+
+  <h2>診療ステップ</h2>
+  <div class="section-block">
 
     <h3>① 観察（Observation）</h3>
-     <ul>
-     <li>生命徴候（意識・呼吸・循環）を確認する</li>
-     <li>患者の様子（姿勢・動作・皮膚所見など）から impression をつかむ</li>
-     <li>本人からの情報に加え、家族や付き添いから得られる問診情報を合わせて、問題点の方向性を把握する</li>
-     </ul>
+    <ul>
+      <li>生命徴候（意識・呼吸・循環）を確認する</li>
+      <li>患者の様子（姿勢・動作・皮膚所見など）から impression をつかむ</li>
+      <li>本人からの情報に加え、家族や付き添いから得られる問診情報を合わせて、問題点の方向性を把握する</li>
+    </ul>
 
     <h3>② 診察と検査（Focused Exam & Tests）</h3>
-     <ul>
-     <li>観察で得た情報に基づき、必要な部位を診察する</li>
-     <li>診察で得た所見に応じて、必要な検査を追加する</li>
-     <li>所見を「正常／異常／不明」に整理する</li>
-     </ul>
+    <ul>
+      <li>観察で得た情報に基づき、必要な部位を診察する</li>
+      <li>診察で得た所見に応じて、必要な検査を追加する</li>
+      <li>所見を「正常／異常／不明」に整理する</li>
+    </ul>
 
-     <h3>③ 問題の整理（Problem Structuring）</h3>
-      <ul>
+    <h3>③ 問題の整理（Problem Structuring）</h3>
+    <ul>
       <li>所見から problem list を作成する</li>
       <li>問題点が生じた理由（なぜそうなったのか）について仮説を立てる</li>
       <li>仮説をもとに、どう診療していくべきかを Plan として構築する</li>
-      </ul>
-    </div>
-
-<h2>対「疾患」診療ではなく、対「人」診療</h2>
-
-<div class="content">
-  <ul>
-    <li>患者を病名で呼称せず、「その人」として扱う</li>
-    <li>所見が患者の生活にどんな影響を与えているかを考える</li>
-    <li>既往歴・服薬・生活状況と所見の関連を整理する</li>
-    <li>医学的問題と、患者にとっての問題を区別する</li>
-    <li>患者の価値観や希望を踏まえて、問題の優先順位を調整する</li>
-    <li>問題点が「疾患を治療することで解決されるのか」を評価する</li>
-  </ul>
-</div>
-
+    </ul>
 
   </div>
+
+  <h2>対「疾患」ではなく、対「人」診療</h2>
+  <div class="section-block">
+    <ul>
+      <li>患者を病名で呼称せず、「その人」として扱う</li>
+      <li>所見が患者の生活にどんな影響を与えているかを考える</li>
+      <li>既往歴・服薬・生活状況と所見の関連を整理する</li>
+      <li>医学的問題と、患者にとっての問題を区別する</li>
+      <li>患者の価値観や希望を踏まえて、問題の優先順位を調整する</li>
+      <li>問題点が「疾患を治療することで解決されるのか」を評価する</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  © resident-tools / FrailCareProject
+</footer>
+
 </body>
 </html>
