@@ -6,63 +6,145 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      margin: 0;
-      padding: 1.2rem;
-      background: #f9fafb;
-      color: #111827;
-    }
-
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    h1 {
-      font-size: 1.4rem;
-      margin-bottom: 0.6rem;
-    }
-
-    .subtitle {
-      font-size: 0.9rem;
-      color: #6b7280;
-      margin-bottom: 1.2rem;
-    }
-
-    .content {
-      background: #ffffff;
-      border-radius: 0.75rem;
-      padding: 1rem;
-      border: 1px solid rgba(209, 213, 219, 0.8);
-    }
-    :root {
-  --pill-o: #a855f7;
-  --axis-color: var(--pill-o);
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  background: #fafafa;
+  color: #222;
 }
 
-h1 {
-  color: var(--axis-color);
+header {
+  background: #a78bfa; /* Olders の紫 */
+  color: white;
+  padding: 1.2rem;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
-.content {
-  border-left: 4px solid var(--axis-color);
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.4rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  border-left: 6px solid #a78bfa; /* 統一 */
+  padding-left: 0.6rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-top: 1.6rem;
+  color: #7c3aed; /* 濃い紫（violet-600） */
+}
+
+ul {
+  padding-left: 1.2rem;
+  margin-top: 0.6rem;
+}
+
+li {
+  margin-bottom: 0.6rem;
+}
+
+.section-block {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  margin-top: 1.4rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #121212;
+    color: #e0e0e0;
+  }
+  header {
+    background: #6d28d9; /* 濃い紫（violet-700） */
+    color: #fff;
+  }
+  .section-block {
+    background: #1e1e1e;
+    box-shadow: none;
+  }
+  h2, h3 {
+    color: #a78bfa;
+  }
 }
 
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Older</h1>
-    <div class="subtitle">高齢者医療：<strong>生活を守り続ける</strong>ための医療
-    </div>
+  <header style="background:#a78bfa; color:white; padding:1.2rem; text-align:center; font-size:1.3rem; font-weight:bold;">
+  Olders｜resident-tools
+</header>
 
-    <div class="content">
-      <p>
-        ここに、この項目の考え方や到達目標を記載していきます。
-      </p>
-    </div>
+<div class="container">
+
+  <h2 style="border-left:6px solid #a78bfa; padding-left:0.6rem; font-weight:600;">
+    Olders：高齢者医療
+  </h2>
+
+  <div class="section-block">
+    <p>
+      生活を守り続けるための医療。<br>
+      本来のPrimary careのこと。
+    </p>
   </div>
+
+<h2>本来のPrimary careとは</h2>
+<div class="section-block">
+  <p>
+    Primary care は「common disease を診る外来」ではありません。
+    その特徴は ACCCA で整理されます。
+  </p>
+  <ul>
+    <li><strong>Accessibility：</strong>相談しやすく、</li>
+    <li><strong>Comprehensiveness：</strong>まず対応してくれ、</li>
+    <li><strong>Coordination：</strong>必要な医療・介護につなぎ、</li>
+    <li><strong>Continuity：</strong>生活を継続し続けられるように、</li>
+    <li><strong>Accountability：</strong>責任をもって説明してくれる人</li>
+  </ul>
+</div>
+<h2>ACCCA＝すなわち、かかりつけ医</h2>
+<div class="section-block">
+  <p>
+    ACCCA は、かかりつけ医が果たすべき役割そのものです。<br>
+    疾患ではなく「人」として向き合い、専門外だからと紹介して終わりにせず、<br>
+    その人の生活が続いていくように責任をもって対応します。
+  </p>
+
+  <p>
+    生活という場の継続を第一に考え、<br>
+    食べること・動くこと・話すことといった基本的な生活機能を守り続けること。<br>
+    これが ACCCA が示す「かかりつけ医」の本質です。
+  </p>
+
+   <p>
+    「生活機能の変化」を理解するためには、フレイルを理解する必要があります。<br>
+       →  <a href="Frailty.html">フレイルについて</a>
+  </p>
+</div>
+
+
+  </div>
+  <footer style="text-align:center; padding:2rem 0; font-size:0.85rem; color:#777;">
+  © resident-tools / FrailCareProject
+</footer>
 </body>
 </html>
