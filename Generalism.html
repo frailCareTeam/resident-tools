@@ -12,6 +12,7 @@
       padding: 1.2rem;
       background: #f9fafb;
       color: #111827;
+      line-height: 1.7;
     }
 
     .container {
@@ -35,21 +36,43 @@
       border-radius: 0.75rem;
       padding: 1rem;
       border: 1px solid rgba(209, 213, 219, 0.8);
+      margin-bottom: 1.4rem;
     }
-:root {
-  --pill-g: #fbbf24;
-  --axis-color: var(--pill-g);
-}
 
-h1 {
-  color: var(--axis-color);
-}
+    h2 {
+      font-size: 1.2rem;
+      margin-top: 1.6rem;
+      margin-bottom: 0.6rem;
+      color: var(--axis-color);
+    }
 
-.content {
-  border-left: 4px solid var(--axis-color);
-}
+    h3 {
+      font-size: 1.1rem;
+      margin-top: 1.2rem;
+      color: #92400e;
+    }
 
+    ul {
+      padding-left: 1.2rem;
+      margin-top: 0.4rem;
+    }
 
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    :root {
+      --pill-g: #fbbf24;
+      --axis-color: var(--pill-g);
+    }
+
+    h1 {
+      color: var(--axis-color);
+    }
+
+    .content {
+      border-left: 4px solid var(--axis-color);
+    }
   </style>
 </head>
 
@@ -58,11 +81,52 @@ h1 {
     <h1>Generalism</h1>
     <div class="subtitle">全人的診療：疾患ではなく、<strong>人</strong>を扱う</div>
 
+    <!-- Generalism の核 -->
     <div class="content">
-      <p>
-        ここに、この項目の考え方や到達目標を記載していきます。
-      </p>
+      <p><strong>Generalism とは：</strong><br>
+      全身を系統的に評価し、疾患ではなく「人の状態」を扱う診断姿勢。</p>
     </div>
+
+    <!-- Generalism の構造 -->
+    <h2>診療ステップ</h2>
+    <div class="content">
+
+    <h3>① 観察（Observation）</h3>
+     <ul>
+     <li>生命徴候（意識・呼吸・循環）を確認する</li>
+     <li>患者の様子（姿勢・動作・皮膚所見など）から impression をつかむ</li>
+     <li>本人からの情報に加え、家族や付き添いから得られる問診情報を合わせて、問題点の方向性を把握する</li>
+     </ul>
+
+    <h3>② 診察と検査（Focused Exam & Tests）</h3>
+     <ul>
+     <li>観察で得た情報に基づき、必要な部位を診察する</li>
+     <li>診察で得た所見に応じて、必要な検査を追加する</li>
+     <li>所見を「正常／異常／不明」に整理する</li>
+     </ul>
+
+     <h3>③ 問題の整理（Problem Structuring）</h3>
+      <ul>
+      <li>所見から problem list を作成する</li>
+      <li>問題点が生じた理由（なぜそうなったのか）について仮説を立てる</li>
+      <li>仮説をもとに、どう診療していくべきかを Plan として構築する</li>
+      </ul>
+    </div>
+
+<h2>対「疾患」診療ではなく、対「人」診療</h2>
+
+<div class="content">
+  <ul>
+    <li>患者を病名で呼称せず、「その人」として扱う</li>
+    <li>所見が患者の生活にどんな影響を与えているかを考える</li>
+    <li>既往歴・服薬・生活状況と所見の関連を整理する</li>
+    <li>医学的問題と、患者にとっての問題を区別する</li>
+    <li>患者の価値観や希望を踏まえて、問題の優先順位を調整する</li>
+    <li>問題点が「疾患を治療することで解決されるのか」を評価する</li>
+  </ul>
+</div>
+
+
   </div>
 </body>
 </html>
