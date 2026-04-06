@@ -1,68 +1,227 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>Primary care｜PGEPOC2</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Primary care｜resident-tools</title>
 
-  <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      margin: 0;
-      padding: 1.2rem;
-      background: #f9fafb;
-      color: #111827;
-    }
-
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    h1 {
-      font-size: 1.4rem;
-      margin-bottom: 0.6rem;
-    }
-
-    .subtitle {
-      font-size: 0.9rem;
-      color: #6b7280;
-      margin-bottom: 1.2rem;
-    }
-
-    .content {
-      background: #ffffff;
-      border-radius: 0.75rem;
-      padding: 1rem;
-      border: 1px solid rgba(209, 213, 219, 0.8);
-    }
-    :root {
-  --pill-p2: #60a5fa;
-  --axis-color: var(--pill-p2);
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  background: #fafafa;
+  color: #222;
 }
 
-h1 {
-  color: var(--axis-color);
+header {
+  background: #0ea5e9; /* ← Primary care の水色 */
+  color: white;
+  padding: 1.2rem;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
-.content {
-  border-left: 4px solid var(--axis-color);
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.4rem;
 }
 
-  </style>
+h2 {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  border-left: 6px solid #0ea5e9; /* ← 統一 */
+  padding-left: 0.6rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-top: 1.6rem;
+  color: #0284c7; /* ← 水色に合う濃い色 */
+}
+
+ul {
+  padding-left: 1.2rem;
+  margin-top: 0.6rem;
+}
+
+li {
+  margin-bottom: 0.6rem;
+}
+
+.section-block {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  margin-top: 1.4rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #121212;
+    color: #e0e0e0;
+  }
+  header {
+    background: #0369a1; /* ← 濃い水色 */
+    color: #fff;
+  }
+  .section-block {
+    background: #1e1e1e;
+    box-shadow: none;
+  }
+  h2, h3 {
+    color: #0ea5e9;
+  }
+}
+
+</style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Primary care</h1>
-    <div class="subtitle">Common diseases：<strong>専門性によらない</strong>疾患診療
-    </div>
 
-    <div class="content">
-      <p>
-        ここに、この項目の考え方や到達目標を記載していきます。
-      </p>
-    </div>
+<header>Primary care｜resident-tools</header>
+
+<div class="container">
+
+  <h2>Primary care：common disease</h2>
+  <div class="section-block">
+    <p>
+      Primary care の第一歩は、<strong>専門性によらない疾患診療（common disease）</strong> を扱えること。<br>
+      研修医が最初に身につけるべき「幅広い疾患への対応力」を意味する。
+    </p>
   </div>
+
+  <h2>Primary care の基本姿勢</h2>
+  <div class="section-block">
+
+    <h3>① よくある疾患を、確実に診る</h3>
+    <ul>
+      <li>頻度の高い疾患を、偏りなく扱う</li>
+      <li>専門性に依存せず、初期対応ができるようにする</li>
+      <li>common disease の診療経験を積み、判断の幅を広げる</li>
+    </ul>
+
+    <h3>② 病態の変化を見逃さない</h3>
+    <ul>
+      <li>症状の経過を追い、悪化の兆候を早期に捉える</li>
+      <li>必要に応じて、専門医へ相談・紹介する判断を行う</li>
+    </ul>
+
+    <h3>③ 患者の生活背景を踏まえて診療する</h3>
+    <ul>
+      <li>既往歴・服薬・生活状況を含めて評価する</li>
+      <li>疾患だけでなく、生活への影響を考慮する</li>
+    </ul>
+
+  </div>
+<h2>common disease：各論</h2>
+<div class="section-block">
+
+  <h3>感染症・アレルギー</h3>
+  <ul>
+    <li>風邪</li>
+    <li>上気道炎</li>
+    <li>インフルエンザ</li>
+    <li>COVID-19</li>
+    <li>アレルギー性鼻炎</li>
+    <li>副鼻腔炎</li>
+    <li>扁桃炎</li>
+  </ul>
+
+  <h3>呼吸器系疾患</h3>
+  <ul>
+    <li>肺炎</li>
+    <li>誤嚥性肺炎</li>
+    <li>COPD（肺気腫）増悪</li>
+    <li>気管支喘息</li>
+  </ul>
+
+  <h3>循環器系疾患</h3>
+  <ul>
+    <li>胸痛</li>
+    <li>動悸</li>
+    <li>息切れ</li>
+    <li>不整脈</li>
+    <li>高血圧</li>
+  </ul>
+
+  <h3>消化器系疾患</h3>
+  <ul>
+    <li>腹痛</li>
+    <li>下痢</li>
+    <li>嘔吐</li>
+    <li>便秘</li>
+    <li>吐下血（軽度）</li>
+    <li>糖尿病（初期対応）</li>
+  </ul>
+
+  <h3>泌尿器系疾患</h3>
+  <ul>
+    <li>尿閉</li>
+    <li>膀胱炎</li>
+    <li>腎盂腎炎</li>
+  </ul>
+
+  <h3>整形外科系疾患</h3>
+  <ul>
+    <li>腰痛</li>
+    <li>下肢痛</li>
+    <li>関節痛</li>
+  </ul>
+
+<h3>精神・神経系疾患</h3>
+<ul>
+  <li>頭痛（危険徴候のないもの）</li>
+  <li>軽度の意識変容（混乱・せん妄）</li>
+  <li>不眠</li>
+  <li>不安</li>
+</ul>
+
+<h3>その他のよくある症状</h3>
+<ul>
+  <li>発熱</li>
+  <li>脱水（軽度〜中等度）</li>
+  <li>食思不振（食欲低下）</li>
+  <li>めまい</li>
+  <li>ふらつき</li>
+  <li>浮腫</li>
+</ul>
+</div>
+
+<h2>common disease学習フレーム</h2>
+<div class="section-block">
+  <p>
+    以下のフレームに沿って、各々が自分で考え、各疾患について整理してみてください。
+  </p>
+
+  <ul>
+    <li>① まず見るべきポイント</li>
+    <li>② よくある原因</li>
+    <li>③ 危険徴候（見逃してはいけない）</li>
+    <li>④ 初期対応（研修医ができる範囲）</li>
+    <li>⑤ 相談・紹介の基準</li>
+    <li>⑥ 患者への説明ポイント</li>
+  </ul>
+
+</div>
+
+</div>
+
+<footer>
+  © resident-tools / FrailCareProject
+</footer>
+
 </body>
 </html>
