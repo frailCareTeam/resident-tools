@@ -1,65 +1,174 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>Professionalism｜PGEPOC2</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professionalism｜resident-tools</title>
 
-  <style>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+    background: #fafafa;
+    color: #222;
+  }
+
+  header {
+    background: #1e88e5;
+    color: white;
+    padding: 1.2rem;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    border-left: 6px solid #1e88e5;
+    padding-left: 0.6rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    margin-top: 1.6rem;
+    color: #1e88e5;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+    margin-top: 1.2rem;
+    color: #1565c0;
+  }
+
+  ul {
+    padding-left: 1.2rem;
+    margin-top: 0.6rem;
+  }
+
+  li {
+    margin-bottom: 0.6rem;
+  }
+
+  /* 円環構造ブロック */
+  .relation-cycle {
+    background: #ffffff;
+    padding: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    margin-top: 1.4rem;
+  }
+
+  .relation-cycle ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .relation-cycle li {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    background: #f0f7ff;
+    border-left: 4px solid #1e88e5;
+    border-radius: 6px;
+  }
+
+  /* セクションブロック */
+  .section-block {
+    background: #fff;
+    padding: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    margin-top: 1.4rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.85rem;
+    color: #777;
+  }
+
+  @media (prefers-color-scheme: dark) {
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      margin: 0;
-      padding: 1.2rem;
-      background: #f9fafb;
-      color: #111827;
+      background: #121212;
+      color: #e0e0e0;
     }
-
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
+    header {
+      background: #1565c0;
     }
-
-    h1 {
-      font-size: 1.4rem;
-      margin-bottom: 0.6rem;
+    .relation-cycle, .section-block {
+      background: #1e1e1e;
+      box-shadow: none;
     }
-
-    .subtitle {
-      font-size: 0.9rem;
-      color: #6b7280;
-      margin-bottom: 1.2rem;
+    .relation-cycle li {
+      background: #1a2636;
+      border-left-color: #42a5f5;
     }
-
-    .content {
-      background: #ffffff;
-      border-radius: 0.75rem;
-      padding: 1rem;
-      border: 1px solid rgba(209, 213, 219, 0.8);
+    h2, h3, h4 {
+      color: #42a5f5;
     }
-:root {
-  --axis-color: #ef4444; /* PGEPOC2のPと同じ赤 */
-}
-    h1 {
-  color: var(--axis-color);
-}
-
-.content {
-  border-left: 4px solid var(--axis-color);
-}
-
-  </style>
+  }
+</style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Professionalism</h1>
-    <div class="subtitle">医師としての姿勢・態度：<strong>責任・真摯・研鑽</strong>の3つを土台に、医師としての在り方を磨き続ける</div>
 
-    <div class="content">
-      <p>
-        ここに、この項目の考え方や到達目標を記載していきます。
-      </p>
-    </div>
+<header>Professionalism｜resident-tools</header>
+
+<div class="container">
+
+  <h2>３つの軸の円環構造</h2>
+
+  <div class="relation-cycle">
+    <ul>
+      <li><strong>責任：</strong>責任ある判断を支えるのは、真摯さと研鑽</li>
+      <li><strong>真摯：</strong>誠実であり続けるために、責任と研鑽が寄り添う</li>
+      <li><strong>研鑽：</strong>謙虚に学び続けるために、責任と真摯さが向きを定める</li>
+    </ul>
   </div>
+
+  <h2>３つの軸の交差点での具体的な取り組み</h2>
+
+  <div class="section-block">
+    <h3>責任 × 真摯</h3>
+    <ul>
+      <li>決めつけず、客観的に状況を確認する</li>
+      <li>判断の根拠を、自分の言葉で整理する</li>
+      <li>迷ったらすぐに相談し、判断を独りで抱え込まない</li>
+      <li>必要な情報は、繰り返し情報収集して補う</li>
+    </ul>
+
+    <h3>責任 × 研鑽</h3>
+    <ul>
+      <li>学びがあった症例を、ショートサマリー化して振り返る</li>
+      <li>他の医師の判断について、なぜその判断になったのかを確認する</li>
+      <li>分からなかったこと・曖昧だったことは、その日のうちに改修しておく</li>
+      <li>学んだ内容を、次の診療に役立てる</li>
+    </ul>
+
+    <h3>真摯 × 研鑽</h3>
+    <ul>
+      <li>患者・家族・他職種の話を遮らず、まずは傾聴する</li>
+      <li>推測で埋めず、確認してから伝える</li>
+      <li>多角的視点で評価できるようにする</li>
+      <li>学びを「知識の追加」で終わらせず、診療に役立てる</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  © resident-tools / FrailCareProject
+</footer>
+
 </body>
 </html>
