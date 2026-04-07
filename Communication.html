@@ -1,68 +1,187 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>Communication｜PGEPOC2</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Communication｜resident-tools</title>
 
-  <style>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+    background: #fafafa;
+    color: #222;
+  }
+
+  /* Communication 軸カラー（オレンジ） */
+  :root {
+    --axis-color: #f97316;
+  }
+
+  header {
+    background: var(--axis-color);
+    color: white;
+    padding: 1.2rem;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    border-left: 6px solid var(--axis-color);
+    padding-left: 0.6rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    margin-top: 1.6rem;
+    color: var(--axis-color);
+  }
+
+  ul {
+    padding-left: 1.2rem;
+    margin-top: 0.6rem;
+  }
+
+  li {
+    margin-bottom: 0.6rem;
+  }
+
+  /* セクションブロック（Professionalism と完全一致） */
+  .section-block {
+    background: #fff;
+    padding: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    margin-top: 1.4rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.85rem;
+    color: #777;
+  }
+
+  @media (prefers-color-scheme: dark) {
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      margin: 0;
-      padding: 1.2rem;
-      background: #f9fafb;
-      color: #111827;
+      background: #121212;
+      color: #e0e0e0;
     }
-
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
+    header {
+      background: var(--axis-color);
     }
-
-    h1 {
-      font-size: 1.4rem;
-      margin-bottom: 0.6rem;
+    .section-block {
+      background: #1e1e1e;
+      box-shadow: none;
     }
-
-    .subtitle {
-      font-size: 0.9rem;
-      color: #6b7280;
-      margin-bottom: 1.2rem;
+    h2, h3 {
+      color: var(--axis-color);
     }
-
-    .content {
-      background: #ffffff;
-      border-radius: 0.75rem;
-      padding: 1rem;
-      border: 1px solid rgba(209, 213, 219, 0.8);
-    }
-    :root {
-  --pill-c: #f97316;
-  --axis-color: var(--pill-c);
-}
-
-h1 {
-  color: var(--axis-color);
-}
-
-.content {
-  border-left: 4px solid var(--axis-color);
-}
-
-  </style>
+  }
+</style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Communication</h1>
-    <div class="subtitle">情報伝達：限られた時間を無駄にせず、<strong>必要な情報を適切に共有するスキル</strong>
-    </div>
 
-    <div class="content">
+  <header>Communication｜resident-tools</header>
+
+  <main class="container">
+
+    <h2>Communication：情報伝達</h2>
+
+    <div class="section-block">
       <p>
-        ここに、この項目の考え方や到達目標を記載していきます。
+        限られた時間を無駄にせず、必要な情報を適切に共有するスキル。<br>
+        「誤解なく、過不足なく、必要なタイミングで伝える」ことが、研修医に求められる最も重要なスキルのひとつです。<br>
+        また、コミュニケーションは、単なる情報伝達にとどまりません。<br>
+        相互理解(お互いの尊重)を通じて、信頼関係へとつながり、結果として、医療の質の向上、業務効率の改善、そして医療安全といった<strong>双方向性の利益</strong>につながります。
       </p>
     </div>
-  </div>
+
+    <section id="communication-basics" class="section-block">
+
+<h3>1. Communicationの基本</h3>
+<p>
+  医療現場におけるコミュニケーションには階層があります。<br>
+  コミュニケーションは双方向性であり、<strong>下層が成立していなければ上層は成り立ちません</strong>。
+</p>
+
+<h4>最下層（ベース・ボトム）：挨拶とホウレンソウ</h4>
+<ul>
+  <li>挨拶は、相手が話を聞く姿勢をつくる最低限の入口。</li>
+  <li>ホウレンソウ（報告・連絡・相談）は、関係性に関わらず<strong>義務として行う情報共有</strong>。</li>
+</ul>
+
+<h4>中層：日常会話・距離の近いコミュニケーション</h4>
+<ul>
+  <li>相手との関係性を築くための、双方向的なやりとり。</li>
+  <li>医療の質や業務効率を高める土台となる。</li>
+</ul>
+
+<h4>上層：以心伝心</h4>
+<ul>
+  <li>言葉が少なくても意図が共有され、判断や行動が自然に一致する状態。</li>
+  <li>必須ではないが、到達できれば理想的（家庭でも難しいよ）。</li>
+</ul>
+
+    </section>
+
+    <section id="horenso-timing" class="section-block">
+
+      <h3>2. ホウレンソウ</h3>
+
+      <h4>何を共有するか（対象）</h4>
+      <ul>
+        <li>会ったとき（まず挨拶、必要があれば状況共有）。</li>
+        <li>何かが起こったとき。</li>
+        <li>患者の状態に変化があったとき。</li>
+        <li>想定外の出来事が起きたとき。</li>
+        <li>判断に迷いが生じたとき。</li>
+      </ul>
+
+      <h4>いつ共有するか（原則）</h4>
+      <ul>
+        <li>医療においては<strong>「速やかに」</strong>が鉄則。</li>
+        <li>気づいた時点で共有する（情報が揃うのを待たない）。</li>
+        <li>患者の状態に直結することは、時間帯を問わず速やかに共有する。</li>
+      </ul>
+
+    </section>
+
+    <section id="how-sbar" class="section-block">
+
+      <h3>3. SBAR：情報を整理し、伝達の抜け漏れを防ぐ方法</h3>
+      <ul>
+        <li><strong>S（Situation）</strong>：いま何が起きているか</li>
+        <li><strong>B（Background）</strong>：背景・これまでの経過</li>
+        <li><strong>A（Assessment）</strong>：自分の評価</li>
+        <li><strong>R（Recommendation）</strong>：相談したい点・提案</li>
+      </ul>
+
+     <p><strong>例：夜間、患者の呼吸状態が変化したケース</strong></p>
+     <ul>
+      <li><strong>S（Situation）</strong>：〇号室のAさんですが、呼吸数が増え、SpO₂が90％まで低下しています。</li>
+      <li><strong>B（Background）</strong>：圧迫骨折で入院中で、これまではSpO₂ 98％前後で安定していました。</li>
+      <li><strong>A（Assessment）</strong>：誤嚥した可能性があると考えています。</li>
+      <li><strong>R（Recommendation）</strong>：酸素投与で経過を見ていいですか？</li>
+     </ul>
+
+    </section>
+
+  </main>
+
+  <footer>© resident-tools / FrailCareProject</footer>
+
 </body>
-</html>
