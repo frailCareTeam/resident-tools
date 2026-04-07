@@ -1,68 +1,131 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>ニコニコ｜PGEPOC2</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>にこにこ｜resident-tools</title>
 
-  <style>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+    background: #fafafa;
+    color: #222;
+  }
+
+  /* にこにこ軸カラー（やわらかいグレー） */
+  :root {
+    --axis-color: #9ca3af;
+  }
+
+  header {
+    background: var(--axis-color);
+    color: #ffffff;
+    padding: 1.2rem;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    border-left: 6px solid var(--axis-color);
+    padding-left: 0.6rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    margin-top: 1.6rem;
+    color: var(--axis-color);
+  }
+
+  ul {
+    padding-left: 1.2rem;
+    margin-top: 0.6rem;
+  }
+
+  li {
+    margin-bottom: 0.6rem;
+    color: var(--axis-color);
+    font-weight: 600;
+  }
+
+  .section-block {
+    background: #ffffff;
+    padding: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    margin-top: 1.4rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.85rem;
+    color: #777;
+  }
+
+  @media (prefers-color-scheme: dark) {
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      margin: 0;
-      padding: 1.2rem;
-      background: #f9fafb;
-      color: #111827;
+      background: #121212;
+      color: #e0e0e0;
     }
 
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
+    header {
+      background: var(--axis-color);
     }
 
-    h1 {
-      font-size: 1.4rem;
-      margin-bottom: 0.6rem;
+    .section-block {
+      background: #1e1e1e;
+      box-shadow: none;
     }
 
-    .subtitle {
-      font-size: 0.9rem;
-      color: #6b7280;
-      margin-bottom: 1.2rem;
+    h2, h3 {
+      color: var(--axis-color);
     }
 
-    .content {
-      background: #ffffff;
-      border-radius: 0.75rem;
-      padding: 1rem;
-      border: 1px solid rgba(209, 213, 219, 0.8);
+    li {
+      color: var(--axis-color);
     }
-    :root {
- --pill-2: #10b981;
-  --axis-color: var(--pill-2);
-}
+  }
+</style>
 
-h1 {
-  color: var(--axis-color);
-}
-
-.content {
-  border-left: 4px solid var(--axis-color);
-}
-
-  </style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>にこにこ(#^^#)</h1>
-    <div class="subtitle"><strong>笑顔</strong>で接する、<strong>笑顔</strong>でいられる、研修生活
-    </div>
 
-    <div class="content">
-      <p>
-        ここに、この項目の考え方や到達目標を記載していきます。
-      </p>
-    </div>
-  </div>
+<header>にこにこ｜resident-tools</header>
+
+<div class="container">
+
+  <h2>2 にこにこ（#＾＾#）</h2>
+
+  <section class="section-block">
+    <p>
+      研修医が安心して学べる環境は、診療の質に直結します。<br>
+      笑顔や穏やかな態度は、研修医だけでなく、他スタッフや患者の緊張も和らげ、質問や相談をしやすい環境となります。<br>
+      その積み重ねが、信頼関係を生み、チーム医療の安定と医療安全につながります。<br>
+      もし、にこにこしていられない状況があれば、すぐに相談してください。
+    </p>
+  </section>
+
+</main>
+
+</div>
+
+<footer>
+  © resident-tools / FrailCareProject
+</footer>
+
 </body>
 </html>
