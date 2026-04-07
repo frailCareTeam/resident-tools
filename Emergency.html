@@ -212,14 +212,17 @@ li.arrow {
   </ul>
 
 </div>
+</main>
 
-</div>
+<div id="footer"></div>
 
-      </p>
-    </div>
-  </div>
-  <footer>
-  © resident-tools / FrailCareProject
-</footer>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
+
 </body>
 </html>
