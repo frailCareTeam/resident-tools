@@ -15,8 +15,14 @@
     color: #222;
   }
 
+  /* Emergency（E）軸カラー：index と同期（緑） */
+  :root {
+    --axis-color: #34d399;      /* 明るい緑 */
+    --axis-color-dark: #059669; /* 濃い緑 */
+  }
+
   header {
-    background: #34d399; /* ← 写真の色 */
+    background: var(--axis-color);
     color: white;
     padding: 1.2rem;
     text-align: center;
@@ -33,7 +39,7 @@
   h2 {
     font-size: 1.3rem;
     margin-top: 2rem;
-    border-left: 6px solid #34d399; /* ← 統一 */
+    border-left: 6px solid var(--axis-color);
     padding-left: 0.6rem;
     font-weight: 600;
   }
@@ -41,13 +47,13 @@
   h3 {
     font-size: 1.2rem;
     margin-top: 1.6rem;
-    color: #34d399; /* ← 統一 */
+    color: var(--axis-color);
   }
 
   h4 {
     font-size: 1.1rem;
     margin-top: 1.2rem;
-    color: #059669; /* ← 緑の濃い色 */
+    color: var(--axis-color-dark);
   }
 
   ul {
@@ -58,10 +64,11 @@
   li {
     margin-bottom: 0.6rem;
   }
-li.arrow {
-  list-style: none;
-  margin-left: -1.2rem; /* ← 左のズレを補正（必要なら） */
-}
+
+  li.arrow {
+    list-style: none;
+    margin-left: -1.2rem;
+  }
 
   /* 円環構造ブロック */
   .relation-cycle {
@@ -80,8 +87,8 @@ li.arrow {
   .relation-cycle li {
     margin-bottom: 1rem;
     padding: 0.8rem;
-    background: #ecfdf5; /* ← 緑系の淡い背景 */
-    border-left: 4px solid #34d399; /* ← 統一 */
+    background: #ecfdf5; /* 緑系の淡い背景 */
+    border-left: 4px solid var(--axis-color);
     border-radius: 6px;
   }
 
@@ -101,24 +108,26 @@ li.arrow {
     color: #777;
   }
 
+  /* ダークモードでも白背景を維持（全ページ共通仕様） */
   @media (prefers-color-scheme: dark) {
     body {
-      background: #121212;
-      color: #e0e0e0;
+      background: #fafafa;
+      color: #222;
     }
     header {
-      background: #059669; /* ← 緑の濃い色 */
+      background: var(--axis-color);
+      color: #fff;
     }
     .relation-cycle, .section-block {
-      background: #1e1e1e;
+      background: #fff;
       box-shadow: none;
     }
     .relation-cycle li {
-      background: #064e3b; /* ← 緑系の暗い背景 */
-      border-left-color: #34d399;
+      background: #ecfdf5;
+      border-left-color: var(--axis-color);
     }
     h2, h3, h4 {
-      color: #34d399;
+      color: var(--axis-color);
     }
   }
 </style>
@@ -128,7 +137,7 @@ li.arrow {
 
 <header>Emergency｜resident-tools</header>
 
-  <div class="container">
+<div class="container">
 
   <h2>初期対応</h2>
   <div class="section-block">
@@ -137,82 +146,85 @@ li.arrow {
     </p>
   </div>
 
-<h2>生命徴候</h2>
-<div class="section-block">
-  <p>
-    生命徴候は「意識・呼吸・循環」の3つから構成される。<br>
-    これらはいずれかが障害されると、他の生命徴候にも相互に影響が及ぶ。<br>
-    生命徴候を安定化させるためには、この3つすべての安定化が不可欠である。
-  </p>
+  <h2>生命徴候</h2>
+  <div class="section-block">
+    <p>
+      生命徴候は「意識・呼吸・循環」の3つから構成される。<br>
+      これらはいずれかが障害されると、他の生命徴候にも相互に影響が及ぶ。<br>
+      生命徴候を安定化させるためには、この3つすべての安定化が不可欠である。
+    </p>
+  </div>
+
+  <h2>ABCDE アプローチ（初期評価）</h2>
+  <div class="section-block">
+
+    <h3>A：Airway（気道）</h3>
+    <ul>
+      <li>声が出せるか（＝気道開通の有無）</li>
+      <li>気道閉塞の兆候（喘鳴・陥没・奇異性呼吸）</li>
+      <li class="arrow">→ 気道閉塞が疑われる場合：吸引・体位調整・エアウェイ確保</li>
+    </ul>
+
+    <h3>B：Breathing（呼吸）</h3>
+    <ul>
+      <li>呼吸数・SpO₂</li>
+      <li>胸郭の動き、左右差</li>
+      <li>奇異性呼吸（努力呼吸を含む）</li>
+      <li>呼吸音（減弱・左右差・喘鳴・捻髪音）</li>
+      <li>胸部外傷が疑われる場合：触診（圧痛・皮下気腫・変形）</li>
+      <li class="arrow">→ 呼吸不全が疑われる場合：必要に応じて酸素投与</li>
+    </ul>
+
+    <h3>C：Circulation（循環）</h3>
+    <ul>
+      <li>脈拍・血圧</li>
+      <li>冷感・チアノーゼ・虚脱感</li>
+      <li>明らかな出血の有無</li>
+      <li class="arrow">→ ショック徴候があれば：20G 以上で静脈ライン確保</li>
+      <li class="arrow">→ ショックが明らかな場合：18G 以上を 2 ライン、ソリューゲンF で輸液開始</li>
+    </ul>
+
+    <h3>D：Dysfunction of CNS（中枢神経）</h3>
+    <ul>
+      <li>意識レベル（GCS）</li>
+      <li>瞳孔（左右差・対光反射）</li>
+      <li>四肢麻痺の有無</li>
+      <li class="arrow">→ GCS＜8、または 30 分で 2 点以上低下：気道確保の準備</li>
+    </ul>
+
+    <h3>E：Exposure（全身観察）</h3>
+    <ul>
+      <li>体温</li>
+      <li>発疹・外傷・疼痛部位</li>
+      <li class="arrow">→ 低体温を避けるため、必要な範囲で脱衣し、速やかに保温</li>
+    </ul>
+
+  </div>
+
+  <h2>継続評価（Reassessment）</h2>
+  <div class="section-block">
+
+    <h3>① ABCD の安定が得られていない場合</h3>
+    <ul>
+      <li>ABCD のいずれかが不安定であれば、急変のリスクは常に存在する</li>
+      <li>異常がある項目は、改善が得られるまで繰り返し評価する</li>
+    </ul>
+
+    <h3>② 容認できない異常がある場合</h3>
+    <ul>
+      <li>ABCD に異常があり、容認できない場合は、評価と介入を止めずに継続する</li>
+      <li>改善が得られない場合は、専門医へ早期に相談する</li>
+    </ul>
+
+    <h3>③ 危機的状況への対応</h3>
+    <ul>
+      <li>ABCD がいずれも安定せず、危機的状況であれば、気管挿管が必要となる</li>
+      <li>ただちに上級医に連絡を取ること</li>
+    </ul>
+
+  </div>
+
 </div>
-
-<h2>ABCDE アプローチ（初期評価）</h2>
-<div class="section-block">
-
-  <h3>A：Airway（気道）</h3>
-  <ul>
-    <li>声が出せるか（＝気道開通の有無）</li>
-    <li>気道閉塞の兆候（喘鳴・陥没・奇異性呼吸）</li>
-    <li class="arrow">→ 気道閉塞が疑われる場合：吸引・体位調整・エアウェイ確保</li>
-  </ul>
-
-  <h3>B：Breathing（呼吸）</h3>
-  <ul>
-    <li>呼吸数・SpO₂</li>
-    <li>胸郭の動き、左右差</li>
-    <li>奇異性呼吸（努力呼吸を含む）</li>
-    <li>呼吸音（減弱・左右差・喘鳴・捻髪音）</li>
-    <li>胸部外傷が疑われる場合：触診（圧痛・皮下気腫・変形）</li>
-    <li class="arrow">→ 呼吸不全が疑われる場合：必要に応じて酸素投与</li>
-  </ul>
-
-  <h3>C：Circulation（循環）</h3>
-  <ul>
-    <li>脈拍・血圧</li>
-    <li>冷感・チアノーゼ・虚脱感</li>
-    <li>明らかな出血の有無</li>
-    <li class="arrow">→ ショック徴候があれば：20G 以上で静脈ライン確保</li>
-    <li>→ ショックが明らかな場合：18G 以上を 2 ライン、ソリューゲンF で輸液開始</li>
-  </ul>
-
-  <h3>D：Dysfunction of CNS（中枢神経）</h3>
-  <ul>
-    <li>意識レベル（GCS）</li>
-    <li>瞳孔（左右差・対光反射）</li>
-    <li>四肢麻痺の有無</li>
-    <li class="arrow">→ GCS＜8、または 30 分で 2 点以上低下：気道確保の準備</li>
-  </ul>
-
-  <h3>E：Exposure（全身観察）</h3>
-  <ul>
-    <li>体温</li>
-    <li>発疹・外傷・疼痛部位</li>
-    <li class="arrow">→ 低体温を避けるため、必要な範囲で脱衣し、速やかに保温</li>
-  </ul>
-  </div> 
-<h2>継続評価（Reassessment）</h2>
-<div class="section-block">
-
-  <h3>① ABCD の安定が得られていない場合</h3>
-  <ul>
-    <li>ABCD のいずれかが不安定であれば、急変のリスクは常に存在する</li>
-    <li>異常がある項目は、改善が得られるまで繰り返し評価する</li>
-  </ul>
-
-  <h3>② 容認できない異常がある場合</h3>
-  <ul>
-    <li>ABCD に異常があり、容認できない場合は、評価と介入を止めずに継続する</li>
-    <li>改善が得られない場合は、専門医へ早期に相談する</li>
-  </ul>
-
-  <h3>③ 危機的状況への対応</h3>
-  <ul>
-    <li>ABCD がいずれも安定せず、危機的状況であれば、気管挿管が必要となる</li>
-    <li>ただちに上級医に連絡を取ること</li>
-  </ul>
-
-</div>
-</main>
 
 <div id="footer"></div>
 
