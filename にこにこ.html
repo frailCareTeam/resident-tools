@@ -15,7 +15,7 @@
     color: #222;
   }
 
-  /* にこにこ軸カラー（やわらかいグレー） */
+  /* にこにこ軸カラー（index と同期：グレー） */
   :root {
     --axis-color: #9ca3af;
   }
@@ -75,26 +75,24 @@
     color: #777;
   }
 
+  /* ダークモードでも明るい配色を維持 */
   @media (prefers-color-scheme: dark) {
     body {
-      background: #121212;
-      color: #e0e0e0;
+      background: #fafafa;
+      color: #222;
     }
 
     header {
       background: var(--axis-color);
+      color: #fff;
     }
 
     .section-block {
-      background: #1e1e1e;
+      background: #ffffff;
       box-shadow: none;
     }
 
-    h2, h3 {
-      color: var(--axis-color);
-    }
-
-    li {
+    h2, h3, li {
       color: var(--axis-color);
     }
   }
@@ -119,7 +117,7 @@
     </p>
   </section>
 
-</main>
+</div>
 
 <div id="footer"></div>
 
