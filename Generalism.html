@@ -15,8 +15,14 @@
       color: #222;
     }
 
+    /* Generalism（G）軸カラー：index と同期（黄色） */
+    :root {
+      --axis-color: #fbbf24;       /* 明るい黄色 */
+      --axis-color-dark: #b45309;  /* 見出し用の濃いオレンジ */
+    }
+
     header {
-      background: #fbbf24;
+      background: var(--axis-color);
       color: #111;
       padding: 1.2rem;
       text-align: center;
@@ -33,7 +39,7 @@
     h2 {
       font-size: 1.3rem;
       margin-top: 2rem;
-      border-left: 6px solid #fbbf24;
+      border-left: 6px solid var(--axis-color);
       padding-left: 0.6rem;
       font-weight: 600;
     }
@@ -41,7 +47,7 @@
     h3 {
       font-size: 1.2rem;
       margin-top: 1.6rem;
-      color: #b45309;
+      color: var(--axis-color-dark);
     }
 
     ul {
@@ -66,6 +72,25 @@
       padding: 2rem 0;
       font-size: 0.85rem;
       color: #777;
+    }
+
+    /* ダークモードでも白背景を維持（全ページ統一仕様） */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #fafafa;
+        color: #222;
+      }
+      header {
+        background: var(--axis-color);
+        color: #111;
+      }
+      .section-block {
+        background: #fff;
+        box-shadow: none;
+      }
+      h2, h3 {
+        color: var(--axis-color-dark);
+      }
     }
   </style>
 </head>
