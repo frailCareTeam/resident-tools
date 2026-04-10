@@ -15,9 +15,10 @@
     color: #222;
   }
 
-  /* Older 軸カラー（紫） */
+  /* Older（O）軸カラー：index と同期（紫） */
   :root {
-    --axis-color: #a78bfa;
+    --axis-color: #a855f7;      /* 明るい紫 */
+    --axis-color-dark: #7e22ce; /* 濃い紫 */
   }
 
   header {
@@ -46,7 +47,7 @@
   h3 {
     font-size: 1.2rem;
     margin-top: 1.6rem;
-    color: var(--axis-color);
+    color: var(--axis-color-dark);
   }
 
   ul {
@@ -56,7 +57,7 @@
 
   li {
     margin-bottom: 0.6rem;
-    color: var(--axis-color); /* 箇条書きは軸カラー */
+    color: var(--axis-color-dark);
     font-weight: 600;
   }
 
@@ -75,20 +76,22 @@
     color: #777;
   }
 
+  /* ダークモードでも白背景を維持（全ページ統一仕様） */
   @media (prefers-color-scheme: dark) {
     body {
-      background: #121212;
-      color: #e0e0e0;
+      background: #fafafa;
+      color: #222;
     }
     header {
       background: var(--axis-color);
+      color: #fff;
     }
     .section-block {
-      background: #1e1e1e;
+      background: #fff;
       box-shadow: none;
     }
-    h2, h3 {
-      color: var(--axis-color);
+    h2, h3, li {
+      color: var(--axis-color-dark);
     }
   }
 </style>
@@ -146,8 +149,6 @@
 
 </div>
 
-</main>
-
 <div id="footer"></div>
 
 <script>
@@ -160,4 +161,3 @@
 
 </body>
 </html>
-
