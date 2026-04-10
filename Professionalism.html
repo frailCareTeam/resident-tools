@@ -11,13 +11,13 @@
     margin: 0;
     padding: 0;
     line-height: 1.7;
-    background: #fafafa;
+    background: #fafafa; /* Gと同じ背景 */
     color: #222;
   }
 
   header {
-    background: #1e88e5;
-    color: white;
+    background: #fbbf24; /* Gと同じ黄色系に統一 */
+    color: #111;
     padding: 1.2rem;
     text-align: center;
     font-size: 1.3rem;
@@ -33,7 +33,7 @@
   h2 {
     font-size: 1.3rem;
     margin-top: 2rem;
-    border-left: 6px solid #1e88e5;
+    border-left: 6px solid #fbbf24; /* Gと同じ黄色ライン */
     padding-left: 0.6rem;
     font-weight: 600;
   }
@@ -41,13 +41,13 @@
   h3 {
     font-size: 1.2rem;
     margin-top: 1.6rem;
-    color: #1e88e5;
+    color: #b45309; /* Gの見出し色に統一 */
   }
 
   h4 {
     font-size: 1.1rem;
     margin-top: 1.2rem;
-    color: #1565c0;
+    color: #b45309;
   }
 
   ul {
@@ -59,12 +59,11 @@
     margin-bottom: 0.6rem;
   }
 
-  /* 円環構造ブロック */
   .relation-cycle {
-    background: #ffffff;
+    background: #fff;
     padding: 1.2rem;
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
     margin-top: 1.4rem;
   }
 
@@ -76,18 +75,27 @@
   .relation-cycle li {
     margin-bottom: 1rem;
     padding: 0.8rem;
-    background: #f0f7ff;
-    border-left: 4px solid #1e88e5;
+    background: #fff8e1; /* Gのトーンに合わせた淡黄色 */
+    border-left: 4px solid #fbbf24;
     border-radius: 6px;
   }
 
-  /* セクションブロック */
   .section-block {
     background: #fff;
     padding: 1.2rem;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.06);
     margin-top: 1.4rem;
+  }
+
+  a {
+    color: #b45309; /* Gと同系色のリンクカラー */
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #fbbf24;
+    text-decoration: underline;
   }
 
   footer {
@@ -97,27 +105,30 @@
     color: #777;
   }
 
+  /* ダークモード無効化（背景ブラック問題の修正） */
   @media (prefers-color-scheme: dark) {
     body {
-      background: #121212;
-      color: #e0e0e0;
+      background: #fafafa;
+      color: #222;
     }
     header {
-      background: #1565c0;
+      background: #fbbf24;
+      color: #111;
     }
     .relation-cycle, .section-block {
-      background: #1e1e1e;
-      box-shadow: none;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
     }
     .relation-cycle li {
-      background: #1a2636;
-      border-left-color: #42a5f5;
+      background: #fff8e1;
+      border-left-color: #fbbf24;
     }
     h2, h3, h4 {
-      color: #42a5f5;
+      color: #b45309;
     }
   }
 </style>
+
 </head>
 
 <body>
@@ -171,7 +182,6 @@
   </div>
 
 </div>
-</main>
 
 <div id="footer"></div>
 
@@ -185,4 +195,3 @@
 
 </body>
 </html>
-
