@@ -6,86 +6,92 @@
 <title>Primary care｜resident-tools</title>
 
 <style>
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.7;
-  background: #fafafa;
-  color: #222;
-}
-
-header {
-  background: #0ea5e9; /* ← Primary care の水色 */
-  color: white;
-  padding: 1.2rem;
-  text-align: center;
-  font-size: 1.3rem;
-  font-weight: bold;
-}
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 1.4rem;
-}
-
-h2 {
-  font-size: 1.3rem;
-  margin-top: 2rem;
-  border-left: 6px solid #0ea5e9; /* ← 統一 */
-  padding-left: 0.6rem;
-  font-weight: 600;
-}
-
-h3 {
-  font-size: 1.2rem;
-  margin-top: 1.6rem;
-  color: #0284c7; /* ← 水色に合う濃い色 */
-}
-
-ul {
-  padding-left: 1.2rem;
-  margin-top: 0.6rem;
-}
-
-li {
-  margin-bottom: 0.6rem;
-}
-
-.section-block {
-  background: #fff;
-  padding: 1.2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-  margin-top: 1.4rem;
-}
-
-footer {
-  text-align: center;
-  padding: 2rem 0;
-  font-size: 0.85rem;
-  color: #777;
-}
-
-@media (prefers-color-scheme: dark) {
   body {
-    background: #121212;
-    color: #e0e0e0;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+    background: #fafafa;
+    color: #222;
   }
-  header {
-    background: #0369a1; /* ← 濃い水色 */
-    color: #fff;
-  }
-  .section-block {
-    background: #1e1e1e;
-    box-shadow: none;
-  }
-  h2, h3 {
-    color: #0ea5e9;
-  }
-}
 
+  /* Primary care（P2）軸カラー：index と同期（青） */
+  :root {
+    --axis-color: #60a5fa;      /* 明るい青 */
+    --axis-color-dark: #1d4ed8; /* 濃い青 */
+  }
+
+  header {
+    background: var(--axis-color);
+    color: white;
+    padding: 1.2rem;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    border-left: 6px solid var(--axis-color);
+    padding-left: 0.6rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    margin-top: 1.6rem;
+    color: var(--axis-color-dark);
+  }
+
+  ul {
+    padding-left: 1.2rem;
+    margin-top: 0.6rem;
+  }
+
+  li {
+    margin-bottom: 0.6rem;
+  }
+
+  .section-block {
+    background: #fff;
+    padding: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    margin-top: 1.4rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.85rem;
+    color: #777;
+  }
+
+  /* ダークモードでも白背景を維持（全ページ統一仕様） */
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: #fafafa;
+      color: #222;
+    }
+    header {
+      background: var(--axis-color);
+      color: #fff;
+    }
+    .section-block {
+      background: #fff;
+      box-shadow: none;
+    }
+    h2, h3 {
+      color: var(--axis-color-dark);
+    }
+  }
 </style>
 </head>
 
@@ -126,96 +132,98 @@ footer {
     </ul>
 
   </div>
-<h2>common disease：各論</h2>
-<div class="section-block">
 
-  <h3>感染症・アレルギー</h3>
-  <ul>
-    <li>風邪</li>
-    <li>上気道炎</li>
-    <li>インフルエンザ</li>
-    <li>COVID-19</li>
-    <li>アレルギー性鼻炎</li>
-    <li>副鼻腔炎</li>
-    <li>扁桃炎</li>
-  </ul>
+  <h2>common disease：各論</h2>
+  <div class="section-block">
 
-  <h3>呼吸器系疾患</h3>
-  <ul>
-    <li>肺炎</li>
-    <li>誤嚥性肺炎</li>
-    <li>COPD（肺気腫）増悪</li>
-    <li>気管支喘息</li>
-  </ul>
+    <h3>感染症・アレルギー</h3>
+    <ul>
+      <li>風邪</li>
+      <li>上気道炎</li>
+      <li>インフルエンザ</li>
+      <li>COVID-19</li>
+      <li>アレルギー性鼻炎</li>
+      <li>副鼻腔炎</li>
+      <li>扁桃炎</li>
+    </ul>
 
-  <h3>循環器系疾患</h3>
-  <ul>
-    <li>胸痛</li>
-    <li>動悸</li>
-    <li>息切れ</li>
-    <li>不整脈</li>
-    <li>高血圧</li>
-  </ul>
+    <h3>呼吸器系疾患</h3>
+    <ul>
+      <li>肺炎</li>
+      <li>誤嚥性肺炎</li>
+      <li>COPD（肺気腫）増悪</li>
+      <li>気管支喘息</li>
+    </ul>
 
-  <h3>消化器系疾患</h3>
-  <ul>
-    <li>腹痛</li>
-    <li>下痢</li>
-    <li>嘔吐</li>
-    <li>便秘</li>
-    <li>吐下血（軽度）</li>
-    <li>糖尿病（初期対応）</li>
-  </ul>
+    <h3>循環器系疾患</h3>
+    <ul>
+      <li>胸痛</li>
+      <li>動悸</li>
+      <li>息切れ</li>
+      <li>不整脈</li>
+      <li>高血圧</li>
+    </ul>
 
-  <h3>泌尿器系疾患</h3>
-  <ul>
-    <li>尿閉</li>
-    <li>膀胱炎</li>
-    <li>腎盂腎炎</li>
-  </ul>
+    <h3>消化器系疾患</h3>
+    <ul>
+      <li>腹痛</li>
+      <li>下痢</li>
+      <li>嘔吐</li>
+      <li>便秘</li>
+      <li>吐下血（軽度）</li>
+      <li>糖尿病（初期対応）</li>
+    </ul>
 
-  <h3>整形外科系疾患</h3>
-  <ul>
-    <li>腰痛</li>
-    <li>下肢痛</li>
-    <li>関節痛</li>
-  </ul>
+    <h3>泌尿器系疾患</h3>
+    <ul>
+      <li>尿閉</li>
+      <li>膀胱炎</li>
+      <li>腎盂腎炎</li>
+    </ul>
 
-<h3>精神・神経系疾患</h3>
-<ul>
-  <li>頭痛（危険徴候のないもの）</li>
-  <li>軽度の意識変容（混乱・せん妄）</li>
-  <li>不眠</li>
-  <li>不安</li>
-</ul>
+    <h3>整形外科系疾患</h3>
+    <ul>
+      <li>腰痛</li>
+      <li>下肢痛</li>
+      <li>関節痛</li>
+    </ul>
 
-<h3>その他のよくある症状</h3>
-<ul>
-  <li>発熱</li>
-  <li>脱水（軽度〜中等度）</li>
-  <li>食思不振（食欲低下）</li>
-  <li>めまい</li>
-  <li>ふらつき</li>
-  <li>浮腫</li>
-</ul>
-</div>
+    <h3>精神・神経系疾患</h3>
+    <ul>
+      <li>頭痛（危険徴候のないもの）</li>
+      <li>軽度の意識変容（混乱・せん妄）</li>
+      <li>不眠</li>
+      <li>不安</li>
+    </ul>
 
-<h2>common disease学習フレーム</h2>
-<div class="section-block">
-  <p>
-    以下のフレームに沿って、各々が自分で考え、各疾患について整理してみてください。
-  </p>
+    <h3>その他のよくある症状</h3>
+    <ul>
+      <li>発熱</li>
+      <li>脱水（軽度〜中等度）</li>
+      <li>食思不振（食欲低下）</li>
+      <li>めまい</li>
+      <li>ふらつき</li>
+      <li>浮腫</li>
+    </ul>
 
-  <ul>
-    <li>① まず見るべきポイント</li>
-    <li>② よくある原因</li>
-    <li>③ 危険徴候（見逃してはいけない）</li>
-    <li>④ 初期対応（研修医ができる範囲）</li>
-    <li>⑤ 相談・紹介の基準</li>
-    <li>⑥ 患者への説明ポイント</li>
-  </ul>
+  </div>
 
-</div>
+  <h2>common disease 学習フレーム</h2>
+  <div class="section-block">
+    <p>
+      以下のフレームに沿って、各々が自分で考え、各疾患について整理してみてください。
+    </p>
+
+    <ul>
+      <li>① まず見るべきポイント</li>
+      <li>② よくある原因</li>
+      <li>③ 危険徴候（見逃してはいけない）</li>
+      <li>④ 初期対応（研修医ができる範囲）</li>
+      <li>⑤ 相談・紹介の基準</li>
+      <li>⑥ 患者への説明ポイント</li>
+    </ul>
+
+  </div>
 
 </div>
 
