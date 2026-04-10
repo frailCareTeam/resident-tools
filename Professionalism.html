@@ -11,13 +11,19 @@
     margin: 0;
     padding: 0;
     line-height: 1.7;
-    background: #fafafa; /* Gと同じ背景 */
+    background: #fafafa;
     color: #222;
   }
 
+  /* Professionalism（P）軸カラー：index と同期（ピンク） */
+  :root {
+    --axis-color: #f97373;
+    --axis-color-dark: #db2777; /* 見出し・リンク用の濃いピンク */
+  }
+
   header {
-    background: #fbbf24; /* Gと同じ黄色系に統一 */
-    color: #111;
+    background: var(--axis-color);
+    color: #ffffff;
     padding: 1.2rem;
     text-align: center;
     font-size: 1.3rem;
@@ -33,21 +39,15 @@
   h2 {
     font-size: 1.3rem;
     margin-top: 2rem;
-    border-left: 6px solid #fbbf24; /* Gと同じ黄色ライン */
+    border-left: 6px solid var(--axis-color);
     padding-left: 0.6rem;
     font-weight: 600;
   }
 
-  h3 {
+  h3, h4 {
     font-size: 1.2rem;
     margin-top: 1.6rem;
-    color: #b45309; /* Gの見出し色に統一 */
-  }
-
-  h4 {
-    font-size: 1.1rem;
-    margin-top: 1.2rem;
-    color: #b45309;
+    color: var(--axis-color-dark);
   }
 
   ul {
@@ -75,8 +75,8 @@
   .relation-cycle li {
     margin-bottom: 1rem;
     padding: 0.8rem;
-    background: #fff8e1; /* Gのトーンに合わせた淡黄色 */
-    border-left: 4px solid #fbbf24;
+    background: rgba(249, 115, 115, 0.12); /* ピンクの淡色 */
+    border-left: 4px solid var(--axis-color);
     border-radius: 6px;
   }
 
@@ -89,12 +89,12 @@
   }
 
   a {
-    color: #b45309; /* Gと同系色のリンクカラー */
+    color: var(--axis-color-dark);
     text-decoration: none;
   }
 
   a:hover {
-    color: #fbbf24;
+    color: var(--axis-color);
     text-decoration: underline;
   }
 
@@ -105,26 +105,26 @@
     color: #777;
   }
 
-  /* ダークモード無効化（背景ブラック問題の修正） */
+  /* ダークモードでも明るい配色を維持 */
   @media (prefers-color-scheme: dark) {
     body {
       background: #fafafa;
       color: #222;
     }
     header {
-      background: #fbbf24;
-      color: #111;
+      background: var(--axis-color);
+      color: #fff;
     }
     .relation-cycle, .section-block {
       background: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      box-shadow: none;
     }
     .relation-cycle li {
-      background: #fff8e1;
-      border-left-color: #fbbf24;
+      background: rgba(249, 115, 115, 0.12);
+      border-left-color: var(--axis-color);
     }
     h2, h3, h4 {
-      color: #b45309;
+      color: var(--axis-color-dark);
     }
   }
 </style>
@@ -143,6 +143,7 @@
       医療の質を向上させるための、基本的な価値観や行動理念。
     </p>
   </div>
+
   <h2>3つの姿勢</h2>
 
   <div class="relation-cycle">
