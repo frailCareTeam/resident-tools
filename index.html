@@ -2,492 +2,429 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>フレイルケアプロジェクト｜小樽</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>済生会小樽PGEPOC2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
-  body {
-    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-    background-color: #f4f7f9;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    font-size: 1rem;
-    line-height: 1.85;
-  }
-
-  a {
-    color: #0b3c6f;
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  /* ヘッダー */
-  .site-header {
-    background: #0b1f33;
-    color: #fff;
-    padding: 10px 20px;
-  }
-
-  .site-header-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .site-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-  }
-
-  .site-nav {
-    font-size: 0.9rem;
-    display: flex;
-    gap: 16px;
-  }
-
-  .site-nav a {
-    color: #dfe9f5;
-  }
-
-  /* ヒーローセクション */
-  .hero {
-    position: relative;
-    width: 100%;
-    min-height: 340px;
-    background-image: linear-gradient(
-        to bottom,
-        rgba(5, 10, 25, 0.55),
-        rgba(5, 10, 25, 0.85)
-      ),
-      url("otaru_night.jpg");
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-  }
-
-  .hero-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 70px 20px 80px;
-  }
-
-  .hero-title {
-    font-size: 2.4rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    margin-bottom: 12px;
-    text-shadow: 0 0 6px rgba(255, 255, 255, 0.85);
-  }
-
-  .hero-subtitle {
-    font-size: 1.05rem;
-    line-height: 1.8;
-    max-width: 640px;
-    text-shadow: 0 0 6px rgba(255, 255, 255, 0.85);
-  }
-
-  .hero-tagline {
-    margin-top: 18px;
-    font-size: 0.9rem;
-    opacity: 0.9;
-    text-shadow: 0 0 6px rgba(255, 255, 255, 0.85);
-  }
-
-  /* ★ 修正：ヒーロー直下 ACPportal リンク */
-  .acp-hero-link {
-    max-width: 1100px;
-    margin: 20px auto 30px; /* ← 余白追加 */
-    padding: 0 20px;
-  }
-
-  .acp-hero-link a {
-    display: block;
-    text-align: center;
-    padding: 30px 20px; /* ← 縦幅拡大 */
-    background: #ffe2cc; /* ← 視認性の高い淡いサーモン */
-    color: #7a2f00;      /* ← 読みやすい濃いブラウン */
-    font-size: 1.18rem;
-    font-weight: 700;
-    border-radius: 14px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
-    border-left: 6px solid #ff9f5a; /* アクセントライン */
-  }
-
-  .acp-hero-link a:hover {
-    background: #ffd1b0;
-  }
-
-  /* 概念リンク */
-  .concept-links {
-    max-width: 1100px;
-    margin: 32px auto 0;
-    padding: 0 20px;
-    display: flex;
-    gap: 24px;
-  }
-
-  .concept-links a {
-    flex: 1;
-    text-align: center;
-    padding: 18px 20px;
-    border-radius: 14px;
-    background: #e8f2ff;
-    color: #0b3c6f;
-    font-size: 1.05rem;
-    font-weight: 700;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-  }
-
-  .concept-links a:hover {
-    background: #d6e8ff;
-  }
-
-  /* セクション */
-  .section {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 40px 20px;
-  }
-
-  .section h2 {
-    font-size: 1.45rem;
-    color: #0b3c6f;
-    margin-bottom: 14px;
-    border-left: 5px solid #0b3c6f;
-    padding-left: 10px;
-  }
-
-  .section-lead {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 20px;
-  }
-
-  /* パネル */
-  .panel {
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-    padding: 22px 24px;
-    margin-bottom: 20px;
-    font-size: 1rem;
-  }
-
-  .panel h3 {
-    margin-top: 0;
-    font-size: 1.15rem;
-    color: #0b3c6f;
-    margin-bottom: 10px;
-  }
-
-  .panel-list {
-    margin: 0;
-    padding-left: 1.2em;
-  }
-
-  .panel-list li {
-    margin-bottom: 6px;
-  }
-
-  /* 2カラム */
-  .two-column {
-    display: grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-    gap: 20px;
-  }
-
-  /* 資料カード */
-  .resource-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 18px;
-  }
-
-  .resource-card {
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-    padding: 18px 20px;
-    font-size: 0.95rem;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .resource-card h3 {
-    margin-top: 0;
-    font-size: 1.05rem;
-    color: #0b3c6f;
-    margin-bottom: 8px;
-  }
-
-  .resource-card p {
-    margin: 0 0 12px;
-    color: #555;
-  }
-
-  .resource-card a {
-    align-self: flex-start;
-    padding: 6px 12px;
-    border-radius: 6px;
-    background: #0b3c6f;
-    color: #fff;
-    font-size: 0.85rem;
-  }
-
-  /* ACPportal */
-  .acp-link-panel {
-    background: #e8f2ff;
-    border-radius: 10px;
-    padding: 18px 20px;
-    font-size: 1rem;
-    border-left: 5px solid #0b3c6f;
-  }
-
-  .acp-link-panel a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 6px 12px;
-    border-radius: 6px;
-    background: #0b3c6f;
-    color: #fff;
-    font-size: 0.85rem;
-  }
-
-  /* フッター */
-  .site-footer {
-    margin-top: 40px;
-    padding: 20px 20px 28px;
-    background: #0b1f33;
-    color: #d0d8e5;
-    font-size: 0.8rem;
-  }
-
-  .site-footer-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  /* スマホ最適化 */
-  @media (max-width: 800px) {
-    .hero-inner {
-      padding: 50px 16px 60px;
+    :root {
+      --bg: #f5f7fb;
+      --bg-card: #ffffff;
+      --accent: #3b6fd8;
+      --accent-soft: #e3edff;
+      --accent-strong: #244a96;
+      --text-main: #1f2933;
+      --text-sub: #6b7280;
+      --border-soft: #dde3f0;
+      --pill-p: #f97373;
+      --pill-g: #fbbf24;
+      --pill-e: #34d399;
+      --pill-p2: #60a5fa;
+      --pill-o: #a855f7;
+      --pill-c: #f97316;
+      --pill-2: #10b981;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --shadow-soft: 0 14px 30px rgba(15, 23, 42, 0.08);
+      --shadow-subtle: 0 6px 16px rgba(15, 23, 42, 0.06);
     }
-    .hero-title {
-      font-size: 2rem;
-    }
-    .hero-subtitle {
-      font-size: 0.95rem;
-    }
-    .two-column {
-      grid-template-columns: 1fr;
-    }
-    .concept-links {
-      flex-direction: column;
-      gap: 16px;
-    }
-  }
 
-  @media (max-width: 600px) {
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-size: 1.05rem;
-      line-height: 1.95;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      line-height: 1.7;
+      background: radial-gradient(circle at top left, #e0ebff 0, #f5f7fb 40%, #f5f7fb 100%);
+      color: var(--text-main);
     }
 
-    .site-header-inner {
+    .page {
+      min-height: 100vh;
+      display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      gap: 6px;
     }
 
-    .panel {
-      padding: 20px 16px;
+    header {
+      padding: 1.4rem 1.2rem 0.8rem;
+      max-width: 960px;
+      margin: 0 auto;
     }
 
-    .resource-card {
-      padding: 16px 16px;
+    .badge-epoc {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 0.75rem;
+      color: var(--accent-strong);
+      backdrop-filter: blur(10px);
     }
-  }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    h1 {
+      margin: 0.7rem 0 0.3rem;
+      font-size: clamp(1.5rem, 4.8vw, 2.1rem);
+      letter-spacing: 0.03em;
+    }
+
+    .subtitle {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--text-sub);
+    }
+
+    .subtitle strong {
+      color: var(--accent-strong);
+      font-weight: 600;
+    }
+
+    main {
+      flex: 1;
+      padding: 0.4rem 1.2rem 1.8rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    /* ===== 1カラム用レイアウト ===== */
+    .layout-grid {
+      display: block;
+      margin-top: 1rem;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      padding: 1.1rem 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.6rem;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 600;
+      display: flex;
+      gap: 0.4rem;
+    }
+
+    .card-title span.key {
+      font-size: 0.85rem;
+      padding: 0.1rem 0.5rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-strong);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin: 0.4rem 0 0.6rem;
+    }
+
+    .pill {
+      padding: 0.18rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: #e5e7eb;
+    }
+
+    .axis-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.4rem 0 0;
+    }
+
+    .axis-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.6rem;
+      padding: 0.45rem;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(209, 213, 219, 0.8);
+      background: linear-gradient(135deg, #ffffff, #f9fafb);
+      margin-bottom: 0.4rem;
+    }
+
+    .axis-code {
+      font-weight: 700;
+      padding: 0.1rem 0.55rem;
+      border-radius: 999px;
+      background: #e5e7eb;
+    }
+
+    .axis-label-main {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .axis-label-sub {
+      font-size: 0.8rem;
+      color: var(--text-sub);
+    }
+
+    .sm-note {
+      font-size: 0.78rem;
+      color: var(--text-sub);
+      margin-top: 0.4rem;
+    }
+
+    footer {
+      padding: 0.8rem 1.2rem 1.2rem;
+      max-width: 960px;
+      margin: 0 auto;
+      font-size: 0.75rem;
+      color: var(--text-sub);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .footer-right {
+      text-align: right;
+    }
+
+    @media (max-width: 600px) {
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .footer-right {
+        text-align: left;
+      }
+    }
+    /* ===== pill 色指定（復活） ===== */
+.pill.p { background: rgba(248, 113, 113, 0.12); border-color: rgba(248, 113, 113, 0.6); }
+.pill.g { background: rgba(251, 191, 36, 0.12); border-color: rgba(251, 191, 36, 0.6); }
+.pill.e { background: rgba(52, 211, 153, 0.12); border-color: rgba(52, 211, 153, 0.6); }
+.pill.p2 { background: rgba(96, 165, 250, 0.12); border-color: rgba(96, 165, 250, 0.7); }
+.pill.o { background: rgba(168, 85, 247, 0.12); border-color: rgba(168, 85, 247, 0.7); }
+.pill.c { background: rgba(249, 115, 22, 0.12); border-color: rgba(249, 115, 22, 0.7); }
+.pill.two { background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.7); }
+
+/* ===== axis 色同期（復活） ===== */
+.axis-list li:nth-of-type(1) .axis-code,
+.axis-list li:nth-of-type(1) .axis-label-main {
+  color: var(--pill-p);
+  background: rgba(249, 115, 115, 0.12);
+}
+
+.axis-list li:nth-of-type(2) .axis-code,
+.axis-list li:nth-of-type(2) .axis-label-main {
+  color: var(--pill-g);
+  background: rgba(251, 191, 36, 0.12);
+}
+
+.axis-list li:nth-of-type(3) .axis-code,
+.axis-list li:nth-of-type(3) .axis-label-main {
+  color: var(--pill-e);
+  background: rgba(52, 211, 153, 0.12);
+}
+
+.axis-list li:nth-of-type(4) .axis-code,
+.axis-list li:nth-of-type(4) .axis-label-main {
+  color: var(--pill-p2);
+  background: rgba(96, 165, 250, 0.12);
+}
+
+.axis-list li:nth-of-type(5) .axis-code,
+.axis-list li:nth-of-type(5) .axis-label-main {
+  color: var(--pill-o);
+  background: rgba(168, 85, 247, 0.12);
+}
+
+.axis-list li:nth-of-type(6) .axis-code,
+.axis-list li:nth-of-type(6) .axis-label-main {
+  color: var(--pill-c);
+  background: rgba(249, 115, 22, 0.12);
+}
+.axis-list a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.axis-list a:hover {
+  background: rgba(59, 130, 246, 0.04);
+}
+.axis-item {
+  display: grid;
+}
+.axis-item:hover {
+  background: rgba(59, 130, 246, 0.04);
+}
+a.axis-item {
+  display: grid !important;
+}
+
   </style>
 </head>
 
 <body>
+<div class="page">
 
-<header class="site-header">
-  <div class="site-header-inner">
-    <div class="site-title">フレイルケアプロジェクト</div>
-    <nav class="site-nav">
-      <a href="#about">概要</a>
-      <a href="#structure">構造</a>
-      <a href="#resources">資料</a>
-      <a href="#acpportal">ACPportal</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-title">小樽フレイルケアプロジェクト</div>
-    <div class="hero-subtitle">
-      フレイルケアとACPを中心に、<br>
-      小樽の医療と暮らしを持続可能にするためのプロジェクト
-    </div>
-    <div class="hero-tagline">
-      「暮らし」と「医療」を切り離さず、<br>
-      本人の価値観に沿った医療を実践し、<br>
-      まちの安心と持続性を支えていく取り組みです。
-    </div>
-  </div>
-</section>
-
-<!-- ★ 修正：ヒーロー直下 ACPportal リンク -->
-<div class="acp-hero-link">
-  <a href="https://frailcareteam.github.io/AdvanceCarePlanning/" target="_blank" rel="noopener">
-    ACPportal はこちら
+<header>
+<div class="badge-epoc">
+  <span class="badge-dot"></span>
+  <a href="https://epoc2.umin.ac.jp/epoc2.html" target="_blank" rel="noopener">
+    PG‑EPOC2（Post Graduate E‑Portfolio Clinical‑training 2）
   </a>
 </div>
 
-<div class="concept-links">
-  <a href="frailty.html">フレイルとは</a>
-  <a href="acp.html">ACPとは</a>
-</div>
 
-<section id="about" class="section">
-  <h2>プロジェクトの概要</h2>
-
-  <p class="section-lead">
-    小樽では、急速な高齢化により、医療が後手に回り、救急医療に依存した“事後処理型”の構造となっています。
+  <h1>PGEPOC2：研修医の到達目標「6つの軸」＋1</h1>
+  <p class="subtitle">
+    <strong>精神的・身体的・社会的に成長し、医師としての実りを育む</strong><br>
+    済生会小樽病院初期臨床研修の到達目標
   </p>
+</header>
 
-  <p class="section-lead">
-    これでは、生活の変化を早期に捉えられず、悪化してから対応する流れが続いてしまい、地域の医療・介護の負担が積み重なってしまいます。
-  </p>
+<main>
+  <div class="layout-grid">
+    <section class="card">
 
-  <!-- ★ 最適化した資料リンクパネル（繰り返しなし） -->
-  <div class="panel">
-    <h3>事後処理型の現状について詳しく知る</h3>
-    <p>
-      小樽の医療が事後処理型になっている背景や、救急医療に負荷が集中する構造については、以下の資料で詳しく解説しています。
-    </p>
-    <p>
-      <a href="小樽とACP.html">小樽とACP</a>、
-      <a href="急性期医療・救急医療を守るために.html">急性期医療・救急医療を守るために</a>、
-      <a href="Older.html" target="_blank" rel="noopener">かかりつけ医の役割</a>
+        <div class="card-header">
+          <div class="card-title">
+            <span class="key">PGEPOC2</span>
+            <span>6つの軸と「にこにこ」</span>
+          </div>
+        </div>
 
-    </p>
-  </div>
+        <div class="pill-row">
+          <a href="Professionalism.html" class="pill p"><span class="code">P</span>：Professionalism</a>
+          <a href="Generalism.html" class="pill g"><span class="code">G</span>：Generalism</a>
+          <a href="Emergency.html" class="pill e"><span class="code">E</span>：Emergency</a>
+          <a href="Primary_care.html" class="pill p2"><span class="code">P</span>：Primary care</a>
+          <a href="Older_adults.html" class="pill o"><span class="code">O</span>：Older adults</a>
+          <a href="Communication.html" class="pill c"><span class="code">C</span>：Communication</a>
+          <a href="にこにこ.html" class="pill two"><span class="code">2</span>：にこにこ</a>
+        </div>
+<ul class="axis-list">
 
-  <div class="panel">
-    <h3>このプロジェクトが目指していること</h3>
-    <ul class="panel-list">
-      <li>Frailty（フレイル）への社会的介入を通じて、生活の変化を早期に捉える</li>
-      <li>ACPという新しい文化を地域に浸透させ、生活を守る基盤をつくる</li>
-      <li>事後処理型の救急医療から、早期対応を行う“後の先”を取る地域の砦へと転換する</li>
-      <li>社会に積み重なってきた負担を減らし、それを地域の力へと変えていくことで、持続可能な仕組みを実現する</li>
-    </ul>
-  </div>
+  <li>
+    <a href="Professionalism.html" class="axis-item">
+      <div class="axis-code">P</div>
+      <div>
+        <div class="axis-label-main">Professionalism：医師としての姿勢・態度</div>
+        <div class="axis-label-sub">
+          <strong>責任・真摯・研鑽</strong>の3つを土台に、医師としての在り方を磨き続ける
+        </div>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <a href="Generalism.html" class="axis-item">
+      <div class="axis-code">G</div>
+      <div>
+        <div class="axis-label-main">Generalism：全人的診療</div>
+        <div class="axis-label-sub">疾患ではなく、<strong>人</strong>を扱う</div>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <a href="Emergency.html" class="axis-item">
+      <div class="axis-code">E</div>
+      <div>
+        <div class="axis-label-main">Emergency：初期対応</div>
+        <div class="axis-label-sub"><strong>命の危険</strong>を評価し、回避する</div>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <a href="Primary_care.html" class="axis-item">
+      <div class="axis-code">P</div>
+      <div>
+        <div class="axis-label-main">Primary care：common diseases</div>
+        <div class="axis-label-sub"><strong>専門性によらない</strong>疾患診療</div>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <a href="Older.html" class="axis-item">
+      <div class="axis-code">O</div>
+      <div>
+        <div class="axis-label-main">Older：高齢者医療</div>
+        <div class="axis-label-sub"><strong>生活を守り続ける</strong>ための医療</div>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <a href="Communication.html" class="axis-item">
+      <div class="axis-code">C</div>
+      <div>
+        <div class="axis-label-main">Communication：情報伝達</div>
+        <div class="axis-label-sub">
+          限られた時間を無駄にせず、<strong>必要な情報を適切に共有するスキル</strong>
+        </div>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <a href="にこにこ.html" class="axis-item two">
+      <div class="axis-code two">2</div>
+      <div>
+        <div class="axis-label-main two">にこにこ(#^^#)</div>
+        <div class="axis-label-sub two"><strong>笑顔</strong>で接する、<strong>笑顔</strong>でいられる、研修生活</div>
+      </div>
+    </a>
+  </li>
+
+</ul>
+
+
+        <p class="sm-note">
+          PGEPOC2を埋めながら、PGEPOC2を習得していきましょう。         
+        </p>
+<hr class="section-divider">
+
+<section class="link-panel">
+  <h2 class="link-title">教育資料・リンク集</h2>
+  <ul class="link-list">
+    <li>
+      <a href="links.html">▶ 教育資料・リンク集</a>
+      <span class="link-note">研修医教育に関する資料・ツールを順次追加</span>
+    </li>
+  </ul>
 </section>
 
-
-<section id="structure" class="section">
-  <h2>プロジェクトの構造</h2>
-  <p class="section-lead">
-    小樽フレイルケアプロジェクトは、<br>
-    フレイルケアとACPを中心に、地域の医療・介護・福祉・行政・市民が連携して取り組むプロジェクトです。
-  </p>
-
-  <div class="two-column">
-    <div class="panel">
-      <h3>フレイルケア</h3>
-      <p>
-        フレイルの評価や介入を通じて、生活の変化を早期に捉えるための取り組みです。<br>
-        医療者だけでなく、地域の多職種や市民も関わることで、地域全体で支える仕組みを目指しています。
-      </p>
-    </div>
-
-    <div class="panel">
-      <h3>ACP（Advance Care Planning）</h3>
-      <p>
-        ACPは、本人の価値観や希望を尊重した医療を実現するための文化です。<br>
-        小樽では、ACPを地域に浸透させることで、生活と医療を切り離さずに支える基盤づくりを進めています。
-      </p>
-    </div>
+    </section>
   </div>
-</section>
+</main>
 
-
-<section id="resources" class="section">
-  <h2>医療者向け資料</h2>
-  <p class="section-lead">
-    小樽フレイルケアプロジェクトに関連する資料・ツール類です。<br>
-    現場でのカンファレンスや、多職種連携の場面での活用を想定しています。
-  </p>
-
-  <div class="resource-grid">
-    <div class="resource-card">
-      <h3>小樽とACP</h3>
-      <p>小樽の医療構造の変化と、ACP文化の必要性を整理したスライド資料です。</p>
-      <a href="小樽とACP.html">開く</a>
-    </div>
-  <div class="resource-card">
-  <h3>急性期医療・救急医療を守るために</h3>
-  <p>急性期・救急医療が本来の役割を果たすために必要な地域構造と、ACP・Accountabilityの重要性を整理した提言です。</p>
-  <a href="急性期医療・救急医療を守るために.html">開く</a>
-</div>
-<div class="resource-card">
-  <h3>かかりつけ医の役割</h3>
-  <p>ACCCAに基づく、かかりつけ医の本質的役割を整理した資料です。</p>
-  <a href="Older.html" target="_blank" rel="noopener">開く</a>
-</div>
-
-    <div class="resource-card">
-      <h3>医療者用 ACPシート</h3>
-      <p>医療的価値観や治療方針を、本人・家族と共有するためのシートです。</p>
-      <a href="医療者用.html">開く</a>
-    </div>
-
-    <div class="resource-card">
-      <h3>意思決定支援（倫理カンファ用）</h3>
-      <p>価値観が揺れる場面で、多職種で最善の方針を検討するための枠組みです。</p>
-      <a href="意思決定支援用.html">開く</a>
-    </div>
-
-    <div class="resource-card">
-      <h3>フレイル評価・介入ツール</h3>
-      <p>フレイルの評価や、介入内容を整理するためのツール群（準備中）。</p>
-      <a href="#">準備中</a>
-    </div>
+<footer>
+  <div>
+    PG‑EPOC2 × 研修医ページ（試作版）
   </div>
-</section>
-
-<section id="acpportal" class="section">
- <h2>ACPportal</h2>
-  <div class="acp-link-panel">
-    <p>
-    一般の方・ご家族向けの <strong>ACPportal</strong> へのリンクページです。
-    </p>
-    <p>
-    ACPportal では、「自分らしさ」「これからの暮らし」「医療との付き合い方」について、<br>
-    本人や家族が自分のペースで考えられるように構成されています。
-    </p>
-<a href="https://frailcareteam.github.io/AdvanceCarePlanning/" target="_blank" rel="noopener">
-  ACPportal を開く
-</a>
-
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="site-footer-inner">
-    小樽フレイルケアプロジェクト / FrailCareProject<br>
-    本ページは医療・福祉・ケアに関わる専門職向けの情報を含みます。
+  <div class="footer-right">
+    スマホ優先・シンプルカードレイアウト
   </div>
 </footer>
 
+</div>
 </body>
 </html>
